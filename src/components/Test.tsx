@@ -1,3 +1,5 @@
+import placeholderpic from "../assets/dummy1000x750.png";
+
 export default function Test() {
   return (
     <>
@@ -17,7 +19,7 @@ export default function Test() {
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div className="col">
             <div className="card h-100">
-              <img src="https://via.placeholder.com/150" alt="placeholder" />
+              <img src={placeholderpic} alt="placeholder" />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">
@@ -31,7 +33,7 @@ export default function Test() {
           </div>
           <div className="col">
             <div className="card h-100">
-              <img src="https://via.placeholder.com/150" alt="placeholder" />
+              <img src={placeholderpic} alt="placeholder" />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">This is a card</p>
@@ -40,7 +42,7 @@ export default function Test() {
           </div>
           <div className="col">
             <div className="card h-100">
-              <img src="https://via.placeholder.com/150" alt="placeholder" />
+              <img src={placeholderpic} alt="placeholder" />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">This is a card</p>
@@ -49,7 +51,7 @@ export default function Test() {
           </div>
           <div className="col">
             <div className="card h-100">
-              <img src="https://via.placeholder.com/150" alt="placeholder" />
+              <img src={placeholderpic} alt="placeholder" />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">This is a card</p>
@@ -58,7 +60,7 @@ export default function Test() {
           </div>
           <div className="col">
             <div className="card h-100">
-              <img src="https://via.placeholder.com/150" alt="placeholder" />
+              <img src={placeholderpic} alt="placeholder" />
               <div className="card-body">
                 <h5 className="card-title">Card title</h5>
                 <p className="card-text">This is a card</p>
