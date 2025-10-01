@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { blogPostDTO } from "../lib/blogpost.model";
-import placeholderpic from "../assets/dummy1000x750.png";
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { pagingDTO } from "../lib/paging.model";
-import { Link } from "react-router-dom";
+import BlogCard from "../components/BlogCard";
 
 export default function LandingPage() {
   const [blogPosts, setBlogPosts] = useState<blogPostDTO[]>([]);
@@ -78,24 +77,7 @@ export default function LandingPage() {
           <main className="col-md-9 col-lg-10 ">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
               {blogPosts.map((post) => (
-                <div className="col" key={post.postId}>
-                  <div className="card h-100">
-                    <img src={placeholderpic} alt="placeholder" />
-                    <div className="card-body">
-                      <h5 className="card-title">{post.title}</h5>
-                      <p className="card-text">{post.content}</p>
-                      <Link
-                        to={`/blog/${post.postId}`}
-                        className="stretched-link"
-                      ></Link>
-                    </div>
-                    <div className="card-footer">
-                      <small className="text-body-secondary">
-                        {post.postId}
-                      </small>
-                    </div>
-                  </div>
-                </div>
+                <BlogCard key={post.postId} post={post} />
               ))}
             </div>
           </main>
@@ -106,8 +88,6 @@ export default function LandingPage() {
 
   /*return (
     <>
-      <h1>Welcome to React</h1>
-      <p>React is a JavaScript library for building user interfaces.</p>
       <h2>Blog posts</h2>
       <div className="container">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
