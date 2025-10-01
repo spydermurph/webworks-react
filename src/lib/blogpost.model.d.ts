@@ -1,5 +1,5 @@
 export interface blogPostDTO {
-  id: number;
+  postId: number;
   title: string;
   content: string;
   categoryId: number;

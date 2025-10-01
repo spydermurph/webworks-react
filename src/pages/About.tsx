@@ -16,6 +16,7 @@ export default function About() {
                 src={profilepic}
                 alt="Profile"
                 className="rounded-circle img-fluid"
+                style={{ width: "150px", height: "150px" }}
               />
             </div>
             <div className="col-md-9">

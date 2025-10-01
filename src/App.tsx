@@ -1,9 +1,10 @@
 //import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
-import About from "./components/About";
-import LandingPage from "./components/LandingPage";
-import Test from "./components/Test";
+import About from "./pages/About";
+import LandingPage from "./pages/LandingPage";
+import Test from "./pages/Test";
+import BlogDetails from "./pages/blog/BlogDetails";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/test" element={<Test />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/home" element={<LandingPage />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>
