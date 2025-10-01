@@ -11,7 +11,7 @@ export default function BlogDetails() {
 
   useEffect(() => {
     loadData();
-  }, []);
+  });
 
   const loadData = async () => {
     axios
