@@ -21,6 +21,11 @@ export default function Menu() {
                   About Me
                 </NavLink>
               </li>
+              {/*<li className="nav-item">
+                <NavLink className="nav-link" to="/categories">
+                  Category Management
+                </NavLink>
+              </li>*/}
             </ul>
           </div>
         </div>

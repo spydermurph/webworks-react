@@ -5,6 +5,7 @@ import About from "./pages/About";
 import LandingPage from "./pages/LandingPage";
 import Test from "./pages/Test";
 import BlogDetails from "./pages/blog/BlogDetails";
+import CategoryManagement from "./pages/CategoryManagement";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/test" element={<Test />} />
+        <Route path="/categories" element={<CategoryManagement />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
         <Route path="/home" element={<LandingPage />} />

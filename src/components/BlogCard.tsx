@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { blogPostDTO } from "../lib/blogpost.model";
+import { BlogPostDTO } from "../lib/blogpost.model";
 import placeholderpic from "../assets/dummy1000x750.png";
 
 interface BlogCardProps {
-  post: blogPostDTO;
+  post: BlogPostDTO;
 }
 
 export default function BlogCard({ post }: BlogCardProps) {
