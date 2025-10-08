@@ -1,3 +1,16 @@
+# Webworks-react
+
+Web-page for blogging and CV project.
+
+Implemented pages:
+
+| Page               | Description               |
+|--------------------|---------------------------|
+| LandingPage.tsx    | Retrieve paged posts.     |
+| About.tsx          | Retrieve post by ID       |
+| BlogDetails.tsx    | Get all categories.       |
+| CatagoryManagement | Create new category.      |
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
