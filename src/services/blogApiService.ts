@@ -1,5 +1,9 @@
 import axios, { AxiosResponse } from "axios";
-import { BlogPostDTO, CategoryDTO } from "../lib/blogpost.model";
+import {
+  BlogPostDTO,
+  BlogPostExcerptDTO,
+  CategoryDTO,
+} from "../lib/blogpost.model";
 import { pagingDTO } from "../lib/paging.model";
 import { API_ENDPOINTS } from "../endpoints";
 
@@ -20,11 +24,9 @@ export class BlogApiService {
    */
   static async getPosts(
     params: PostsQueryParams = {}
-  ): Promise<pagingDTO<BlogPostDTO>> {
-    const response: AxiosResponse<pagingDTO<BlogPostDTO>> = await axios.get(
-      API_ENDPOINTS.posts.list,
-      { params }
-    );
+  ): Promise<pagingDTO<BlogPostExcerptDTO>> {
+    const response: AxiosResponse<pagingDTO<BlogPostExcerptDTO>> =
+      await axios.get(API_ENDPOINTS.posts.list, { params });
     return response.data;
   }
 
@@ -96,7 +98,9 @@ export class BlogApiService {
    * Create a new category
    * @param categoryData Category data to create
    */
-  static async createCategory(categoryData: Omit<CategoryDTO, 'categoryId'>): Promise<CategoryDTO> {
+  static async createCategory(
+    categoryData: Omit<CategoryDTO, "categoryId">
+  ): Promise<CategoryDTO> {
     const response: AxiosResponse<CategoryDTO> = await axios.post(
       API_ENDPOINTS.posts.categories.create,
       categoryData
@@ -109,7 +113,10 @@ export class BlogApiService {
    * @param id Category ID
    * @param categoryData Updated category data
    */
-  static async updateCategory(id: number, categoryData: Omit<CategoryDTO, 'categoryId'>): Promise<CategoryDTO> {
+  static async updateCategory(
+    id: number,
+    categoryData: Omit<CategoryDTO, "categoryId">
+  ): Promise<CategoryDTO> {
     const response: AxiosResponse<CategoryDTO> = await axios.put(
       API_ENDPOINTS.posts.categories.update(id),
       categoryData

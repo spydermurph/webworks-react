@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { BlogPostDTO, CategoryDTO } from "../lib/blogpost.model";
+import { BlogPostExcerptDTO, CategoryDTO } from "../lib/blogpost.model";
 import { AxiosError } from "axios";
 import BlogCard from "../components/BlogCard";
 import { BlogApiService } from "../services/blogApiService";
 
 export default function LandingPage() {
-  const [blogPosts, setBlogPosts] = useState<BlogPostDTO[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPostExcerptDTO[]>([]);
   const [categories, setCategories] = useState<CategoryDTO[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
