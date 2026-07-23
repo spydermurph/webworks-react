@@ -1,42 +1,122 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* main menu full‑width and centered*/
+/*#mainMenu ul {
+  width: 100%;
   text-align: center;
 }
+#mainMenu .nav-link {
+  display: block;
+  padding: 1rem;
+}
+*/
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+/* main menu dropdown */
+#mainMenu {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  background: #0d6efd;
+  z-index: 2000;
+  padding: 1rem;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
-.card {
-  padding: 2em;
+#mainMenu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+/*main menu full-screen drawer*/
+/*#mainMenu {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0d6efd;
+  padding-top: 80px;
+  padding-left: 1rem;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  z-index: 3000;
+}
+#mainMenu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}*/
+
+/*main menu slide-in side drawer*/
+/*#mainMenu {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  background: #0d6efd;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 3000;
 }
 
-.read-the-docs {
-  color: #888;
+#mainMenu.show {
+  transform: translateX(0);
+}*/
+
+.hamburger {
+  width: 32px;
+  height: 24px;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+/* Animation when open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
 }
